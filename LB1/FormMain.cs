@@ -9,9 +9,12 @@ namespace LB1
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            // создадим объекет контекста данных
             using (ApplicationContext db = new ApplicationContext()) { 
+                // получим записи из таблицы Users и создадим из них список
                 var users = db.Users.ToList();
 
+                labelUsers.Text = "Список пользователей:";
             }
         }
     }

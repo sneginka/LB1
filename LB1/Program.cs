@@ -10,9 +10,12 @@ namespace LB1
         {
 
             using (ApplicationContext db = new ApplicationContext()) {
-                User user1 = new User { Name = "Tom", Age = 33 };
-                User user2 = new User { Name = "Alice", Age = 26 };
 
+                // создаем два объекта класса User
+                User user1 = new User { Name = "Том", Age = 33 };
+                User user2 = new User { Name = "Алиса", Age = 26 };
+
+                // Добавляем пользователей в БД
                 db.Users.AddRange(user1, user1);
                 db.SaveChanges();
             }

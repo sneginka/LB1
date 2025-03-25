@@ -28,20 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panelTop = new Panel();
+            labelUsers = new Label();
+            panel2 = new Panel();
+            panelTop.SuspendLayout();
             SuspendLayout();
+            // 
+            // panelTop
+            // 
+            panelTop.Controls.Add(labelUsers);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(5);
+            panelTop.Name = "panelTop";
+            panelTop.Padding = new Padding(10);
+            panelTop.Size = new Size(684, 100);
+            panelTop.TabIndex = 0;
+            // 
+            // labelUsers
+            // 
+            labelUsers.Dock = DockStyle.Fill;
+            labelUsers.Location = new Point(10, 10);
+            labelUsers.Name = "labelUsers";
+            labelUsers.Size = new Size(664, 80);
+            labelUsers.TabIndex = 0;
+            labelUsers.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 100);
+            panel2.Margin = new Padding(5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(684, 461);
+            panel2.TabIndex = 1;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 561);
+            Controls.Add(panel2);
+            Controls.Add(panelTop);
+            Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Margin = new Padding(5);
             Name = "FormMain";
             Text = "Пользователи";
             Load += FormMain_Load;
+            panelTop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panelTop;
+        private Panel panel2;
+        private Label labelUsers;
     }
 }
