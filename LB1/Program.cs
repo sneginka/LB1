@@ -16,7 +16,7 @@ namespace LB1
                 User user2 = new User { Name = "Алиса", Age = 26 };
 
                 // Добавляем пользователей в БД
-                db.Users.AddRange(user1, user1);
+                db.Users.AddRange(user1, user2);
                 db.SaveChanges();
             }
             ApplicationConfiguration.Initialize();
@@ -24,3 +24,4 @@ namespace LB1
         }
     }
 }
+

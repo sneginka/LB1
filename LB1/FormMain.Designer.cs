@@ -31,7 +31,9 @@
             panelTop = new Panel();
             labelUsers = new Label();
             panel2 = new Panel();
+            LabelInfAboutUsers = new Label();
             panelTop.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panelTop
@@ -56,12 +58,21 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(LabelInfAboutUsers);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 100);
             panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
             panel2.Size = new Size(684, 461);
             panel2.TabIndex = 1;
+            // 
+            // LabelInfAboutUsers
+            // 
+            LabelInfAboutUsers.Dock = DockStyle.Fill;
+            LabelInfAboutUsers.Location = new Point(0, 0);
+            LabelInfAboutUsers.Name = "LabelInfAboutUsers";
+            LabelInfAboutUsers.Size = new Size(684, 461);
+            LabelInfAboutUsers.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -77,6 +88,7 @@
             Text = "Пользователи";
             Load += FormMain_Load;
             panelTop.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -85,5 +97,6 @@
         private Panel panelTop;
         private Panel panel2;
         private Label labelUsers;
+        private Label LabelInfAboutUsers;
     }
 }

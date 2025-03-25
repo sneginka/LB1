@@ -15,7 +15,13 @@ namespace LB1
                 var users = db.Users.ToList();
 
                 labelUsers.Text = "Список пользователей:";
+
+                foreach (var user in users) { 
+                    LabelInfAboutUsers.Text += ($"{user.Id}. {user.Name} - {user.Age}\n");
+                }
             }
         }
     }
 }
+
+
